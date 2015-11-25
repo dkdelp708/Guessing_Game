@@ -1,16 +1,33 @@
-var number = '3';
-	var guess = prompt("How many times have you traveled outside of the U.S.");
-	if (guess === number) {
-		alert("That's great, you have definitely taken the time to explore other parts of the world") 
+var questions = ["How often have you traveled outside US?", 
+				 "How often have you traveled to NYC?", 
+				 "How often have you been to Washington D.C.?"];
+
+var answers = ['3','1','0'];
+
+var correctResponses = ["That's great, you have definitely taken time to travel outside US", 
+						"Glad to hear, NYC is a fun place to check out at least once",
+						"Yes, I would not bother, too much crime"];
+
+var incorrectResponses = ["You should make more time to travel",
+							"Quit being lame and travel to NYC",
+							"Be careful why you are there!"];
+
+var imageArray = ["/images/New_Zealand", "/images/NYC", "/images/Washington_DC"];
+
+for (var i = 0; i <questions.length; i ++) {
+	var guess = prompt(questions[i]);
+	if (guess === answers[i]) {
+		alert(correctResponses[i]); 
+		var el = document.getElementById("img"+i);
+		console.log(el);
+		el.innerHTML = imageArray[i];
 	}
 	else {
-		if (guess < number) {
-			alert("You should try and take some time off and vacation somewhere you would like to explore")
-			alert("Try checking out this website: http://travel.usnews.com/Rankings/Worlds_Best_Vacations/")
+			alert(incorrectResponses[i]);
+		var el = document.getElementById("img" +i);
+		el.innerHTML = "/images/Frownie_Face";
 		}
-		if (guess > number) {
-			alert ("That is amazing, you have traveled more than most.")
-		}
-	}
-	alert("Traveling is amazing, we all are busy, but you have to make time!")
+	};
+	
+		
 	
