@@ -1,0 +1,16 @@
+h1 {
+			color: blue;
+			font-size: 30px;
+			font-family: Verdana;
+			background: green;
+			border: dotted;
+		}
+
+		h2 {
+			color: yellow;
+			font-size: 24px;
+			font-family: Arial;
+			background: orange;
+			border: solid;
+			border-color: teal;
+		}
